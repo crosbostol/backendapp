@@ -2,6 +2,8 @@ from django.urls import path, include
 
 from .views import TeacherRegistrationView, ClientRegistrationView
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     ####        CLIENTE        ####
@@ -32,3 +34,4 @@ urlpatterns = [
     ####        CAMBIO DE CONTRASEÑA USUARIOS        ####
     path('user/reset_password/', include('django_rest_passwordreset.urls', namespace='reset_pass_client')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
