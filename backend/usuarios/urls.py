@@ -9,7 +9,7 @@ urlpatterns = [
     ####        CLIENTE        ####
 
     ###     Registro Cliente     ###
-    path('register/client/', ClientRegistrationView.as_view(), name='Registro_Cliente'),
+    path('register/client/', ClientRegistrationView.as_view()),
     ###     Inicio de sesion de Cliente     ###
     path('client/login/', views.login_user, name='Login_Client'),
     ###     Muestra todos los perfiles de los Clientes     ###
